@@ -574,6 +574,10 @@ video {
   margin: auto;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -589,12 +593,43 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.my-\[\] {
+  margin-top: ;
+  margin-bottom: ;
+}
+
+.my-\[3vh\] {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
 .ml-\[50px\] {
   margin-left: 50px;
 }
 
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[5vh\] {
+  margin-top: 5vh;
 }
 
 .flex {
@@ -605,8 +640,28 @@ video {
   display: grid;
 }
 
+.inline-grid {
+  display: inline-grid;
+}
+
 .h-\[90vh\] {
   height: 90vh;
+}
+
+.h-\[100\] {
+  height: 100;
+}
+
+.h-\[100\%\] {
+  height: 100%;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
 }
 
 .w-6 {
@@ -619,6 +674,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .cursor-pointer {
@@ -668,6 +731,16 @@ video {
   background-color: rgb(32 36 45 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -685,6 +758,16 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .text-2xl {
@@ -737,6 +820,10 @@ video {
 
 .duration-\[0\.6s\] {
   transition-duration: 0.6s;
+}
+
+.duration-\[\] {
+  transition-duration: ;
 }
 
 .ease-in {
@@ -893,15 +980,5 @@ video {
 @media (max-width: 350px) {
   .max-\[350px\]\:w-\[25vh\] {
     width: 25vh;
-  }
-
-  .max-\[350px\]\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .max-\[350px\]\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
   }
 }
