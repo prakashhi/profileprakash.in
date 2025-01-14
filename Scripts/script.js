@@ -6,3 +6,8 @@ window.onload = function() {
         document.querySelector('.imageContent').classList.add('visible');
     }, 2000);
 };
+
+
+function flipCard(card) {
+    card.classList.toggle('flipped');
+}
