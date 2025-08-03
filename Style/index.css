@@ -2,15 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Poppins", sans-serif;
-  scrollbar-width:none;
-}
 
-.tag {
-  @apply px-4 py-1 bg-gray-100 text-gray-700 text-sm rounded-full;
-}
 
-.highlight-card {
-  @apply bg-[#FAFAF8] p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-2;
-}
