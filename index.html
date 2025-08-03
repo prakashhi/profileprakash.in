@@ -1,102 +1,806 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Prakash Prajapati" content="Full Stack developer Website" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/Style/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link href="src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="Style/style.css">
-    <style>
-       
-    </style>
-</head>
+  <body class="">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white bottom-0">
+      <section
+        name="Navbar"
+        style="
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+            rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        "
+        class="p-4 flex max-[600px]:py-3 flex-row items-center justify-between border-b border-gray-200"
+      >
+        <section>
+          <h1
+            class="font-semibold text-xl text-gray-800 max-[600px]:text-[16px]"
+          >
+            Prakash Prajapati
+          </h1>
+        </section>
 
-<body class="bg-[#00c5d5]">
-    <div class="main bg-[#20242d] m-10 max-[500px]:pl-0 h-[90vh] max-lg:h-[100%] rounded-xl p-4 max-lg:m-2 duration-[0.5s]">
-        <div
-            class="nav duration-[0.5s] text-white flex mx-10 my-3 max-[500px]:ml-2 max-[500px]:mr-0 max-[500px]:text-xs">
-            <span class="w-full mr-3 font-bold">
-                Portfolio
+        <section class="max-[600px]:hidden">
+          <ul class="flex flex-row gap-6 text-sm font-medium text-gray-600">
+            <li>
+              <a
+                href="#Home"
+                class="hover:text-black transition-colors duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#About"
+                class="hover:text-black transition-colors duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#Project"
+                class="hover:text-black transition-colors duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#Contact"
+                class="hover:text-black transition-colors duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <img
+          id="Ham"
+          onclick="ShowList()"
+          class="transition-all duration-[0.5s] ease-in-out w-[20px] max-[600px]:block hidden cursor-pointer"
+          src="./images/SVG/list-unordered.svg"
+          alt=""
+        />
+        <img
+          id="close"
+          onclick="Closebtn()"
+          class="transition-all duration-[0.5s] ease-in-out w-[20px] max-[600px]:hidden hidden cursor-pointer"
+          src="./images/SVG/close-line.svg"
+          alt=""
+        />
+      </section>
+      <section
+        id="NavList"
+        style="
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+            rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        "
+        class="transition-all duration-[0.5s] ease-in-out sticky top-0 z-50 bg-white border-b border-gray-200 max-[600px]:hidden hidden"
+      >
+        <ul
+          class="flex flex-col gap-6 text-sm font-medium text-gray-600 px-3 py-1"
+        >
+          <li>
+            <a
+              href="#Home"
+              class="hover:text-black transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#About"
+              class="hover:text-black transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Project"
+              class="hover:text-black transition-colors duration-300"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Contact"
+              class="hover:text-black transition-colors duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <!-- header -->
+    <section name="Header" class="bg-[#F8F9FB] py-10 scroll-mt-20" id="Home">
+      <!-- Profile Image -->
+      <div class="flex justify-center mb-6">
+        <img
+          src="./images/fg.png"
+          alt="Profile Img"
+          width="150"
+          height="150"
+          loading="lazy"
+          class="rounded-full border-4 border-gray-300 object-cover h-[150px] w-[150px] shadow-md"
+        />
+      </div>
+
+      <!-- Main Content Fade In -->
+      <div
+        id="mainContent"
+        class="flex flex-col items-center gap-4 text-center opacity-0 translate-y-10 transition-all duration-1000"
+      >
+        <!-- Typewriter Title -->
+        <h1 class="max-[600px]:text-[30px] text-4xl sm:text-5xl font-bold h-16">
+          <span id="typewriter" class="border-r-4 border-black pr-1"></span>
+        </h1>
+
+        <!-- Description Text -->
+        <article class="max-w-[80ch] px-4">
+          <p class="text-gray-600 mb-1">
+            Creating beautiful, functional, and user-friendly digital
+            experiences with modern technologies and clean code.
+          </p>
+        </article>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mt-4">
+          <a
+            href="#Project"
+            class="text-white px-6 py-2 bg-black rounded-lg text-sm font-medium transition-transform duration-300 hover:scale-105 hover:bg-gray-800"
+          >
+            View My Work
+          </a>
+          <a
+            href="#Contact"
+            class="text-black border border-black px-6 py-2 bg-white rounded-lg text-sm font-medium transition-transform duration-300 hover:scale-105 hover:bg-gray-100 shadow"
+          >
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section name="AboutMe" id="About" class="bg-white py-16 scroll-mt-20">
+      <!-- Section Heading -->
+      <div class="flex flex-col gap-4 items-center mb-10 px-4">
+        <h1 class="text-3xl font-bold text-gray-800">About Me</h1>
+        <p class="text-gray-600 text-center max-w-2xl">
+          Aspiring developer with a proven ability to build real-world digital
+          applications and a strong commitment to continuous improvement.
+        </p>
+      </div>
+
+      <!-- Content Section -->
+      <div class="flex flex-col lg:flex-row gap-8 px-6 max-w-6xl mx-auto">
+        <!-- Left Column: Journey & Skills -->
+        <div class="lg:w-1/2 flex flex-col gap-6">
+          <!-- My Journey -->
+          <div class="flex flex-col gap-3">
+            <h2 class="font-semibold text-xl text-gray-800">My Journey</h2>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              I'm a passionate full-stack developer with hands-on experience in
+              building web applications that solve real-world problems. My
+              journey began with a deep curiosity about how websites work,
+              evolving into a strong commitment to crafting clean, efficient,
+              and user-focused solutions.
+            </p>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              I specialize in the MERN stack — React, Node.js, Express, and
+              MongoDB — and stay updated with the latest trends in modern web
+              development. Through academic projects and self-driven learning,
+              I've developed practical expertise and a strong foundation to
+              thrive in a professional environment.
+            </p>
+          </div>
+
+          <!-- Skill Tags -->
+          <div class="flex flex-wrap gap-2 pt-4">
+            <!-- Frontend Skills -->
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">MUI</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <!-- Backend Skills -->
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div>
+            <a
+              href="./Doc/CV/PRAKASH PRAJAPATI2.pdf"
+              class="text-white px-6 py-2 bg-black rounded-full text-sm font-medium transition-transform duration-300 hover:scale-105 hover:bg-gray-800"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Highlights -->
+        <div class="lg:w-1/2 flex flex-col gap-6">
+          <!-- Card 1 -->
+          <div class="highlight-card">
+            <img
+              src="./images/SVG/code-line.svg"
+              alt="Clean Code"
+              class="w-6"
+            />
+            <p class="font-semibold text-md text-gray-800">Clean Code</p>
+            <span class="text-gray-600 text-sm">
+              Writing maintainable, scalable, and well-structured code.
             </span>
-            <ul class="gap-3 max-[500px]:gap-2 flex ">
-
-                <a href="index.html">
-                    <li
-                        class="hover:text-cyan-500 underline cursor-pointer duration-[0.6s] hover:underline hover:p-1 hover:text-xl font-bold">
-                        Home</li>
-                </a>
-                <a href="About.html">
-                    <li
-                        class="hover:text-cyan-500 cursor-pointer duration-[0.6s] hover:underline hover:p-1 hover:text-xl font-bold">
-                        About</li>
-                </a>
-                <a href="Skill.html">
-                    <li
-                        class="hover:text-cyan-500 cursor-pointer duration-[0.6s] hover:underline hover:p-1 hover:text-xl font-bold">
-                        Skills</li>
-                </a>
-                <a href="Contact.html">
-                    <li
-                        class="hover:text-cyan-500 cursor-pointer duration-[0.6s] hover:underline hover:p-1 hover:text-xl font-bold">
-                        Contact</li>
-                </a>
-            </ul>
+          </div>
+          <!-- Card 2 -->
+          <div class="highlight-card">
+            <img
+              src="./images/SVG/brush-ai-line.svg"
+              alt="UI Design"
+              class="w-6"
+            />
+            <p class="font-semibold text-md text-gray-800">
+              User-Centered Design
+            </p>
+            <span class="text-gray-600 text-sm">
+              Prioritizing UI/UX for clean, accessible digital experiences.
+            </span>
+          </div>
+          <!-- Card 3 -->
+          <div class="highlight-card">
+            <img
+              src="./images/SVG/smartphone-line.svg"
+              alt="Responsive"
+              class="w-6"
+            />
+            <p class="font-semibold text-md text-gray-800">
+              Responsive Layouts
+            </p>
+            <span class="text-gray-600 text-sm">
+              Ensuring optimal display across all device sizes.
+            </span>
+          </div>
         </div>
-        <div
-            class="conatin m-auto relative top-[10vh] max-[500px]:h-[100vh] max-lg:top-[1vh] text-white flex justify-around  gap-[15rem] max-lg:block  duration-[0.5s]">
-            <div class="txt m-5 max-[500px]:text-xl content textContent1 mt-[30px]">
-                <div
-                    class="font-bold hover:text-cyan-700 text-2xl hover:p-1 hover:underline duration-[0.5s] ease-in cursor-pointer" >
-                    Hello,it's Me</div>
-                <div
-                    class="font-bold hover:text-cyan-700 text-4xl hover:p-1 hover:underline duration-[0.5s] ease-in cursor-pointer">
-                    Prakash Prajapati</div>
-                <div
-                    class="font-bold hover:text-cyan-700 text-2xl hover:p-1 hover:underline duration-[0.5s] ease-in cursor-pointer">
-                    And I'm a <span class="text-[#48dbe2]">Fullstack Devloper</span></div>
+      </div>
+    </section>
 
-                <div class="containtext text-slate-500">
-                    Hi,My name is prakash and i am BCA student.I am a Fullstack Devloper
-                </div>
-				<div
-                    class="font-bold hover:text-cyan-700 text-2xl hover:p-1 hover:underline duration-[0.5s] ease-in cursor-pointer" >
-                    <a href="Doc/PRAKASH PRAJAPATI2.pdf">Resume<a></div>
-                <div class="icons  flex  gap-3 invert my-2">
-                    <a
-                        href="https://www.linkedin.com/in/prakash-prajapati-013a0a253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                        <svg class="w-6 duration-[0.5s] ease-out hover:mx-1 cursor-pointer "
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path
-                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                        </svg></a>
-						
-                    <a href="https://github.com/prakashhi"> <svg
-                            class="w-6 duration-[0.5s] ease-out hover:mx-1 cursor-pointer "
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path
-                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg></a>
-						
-						
-						
-                </div>
+    <!-- Projects -->
+    <section name="Projects" id="Project" class="py-3 pb-20 bg-[#FAFAFA]">
+      <div class="flex flex-col gap-3 items-center mt-20 pb-10">
+        <h1 class="text-2xl font-bold">Featured Projects</h1>
+        <div class="w-[90%] md:w-[50%] text-center">
+          <p class="text-gray-500">
+            Here are some of my recent Projects that showcase my skills and
+            passion for development
+          </p>
+        </div>
+      </div>
+
+      <div
+        name="card_Container"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4"
+      >
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/TaskFastHome.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              TaskFast – Smart Task Management with Rewards
+            </h2>
+            <p class="text-sm text-gray-600">
+              TaskFast is a powerful yet user-friendly task management tool
+              designed to help you stay organized and productive. Create,
+              manage, and categorize tasks with ease. Each completed task earns
+              you points, keeping you motivated to get things done. With a clean
+              and intuitive UI, TaskFast makes task tracking effortless and
+              enjoyable.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >MUI</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Express</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >MongoDB</span
+              >
             </div>
-            <div class="imgp  bg-[#01eefe] w-[30vh]  max-[350px]:w-[25vh]  max-[400px]:w-[35vh] max-md:m-auto  px-2 py-3 rounded-full  cursor-pointer hover:p-5 duration-[0.6s] hexagon content imageContent">
-                <img src="images/fg.png" alt="" class="px-4">
-
+            <div class="flex flex-row gap-3">
+              <a
+                href="https://taskfast.netlify.app/"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="http://stayfinder.ct.ws/?i=1"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
             </div>
-
-
+          </div>
+        </div>
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/EmpDaUpate Services.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              EmpDaupdate – Employee Attendance System
+            </h2>
+            <p class="text-sm text-gray-600">
+              EmpDaupdate is an advanced employee attendance solution that
+              records punch-in and punch-out times with location tracking and
+              secure face authentication. It ensures accurate and tamper-proof
+              login data while simplifying workforce management for businesses
+              of all sizes.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Express</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >MongoDB</span
+              >
+            </div>
+            <div class="flex flex-row gap-3">
+              <a
+                href="https://empdaupdate.netlify.app/"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="https://github.com/prakashhi/mernfullproject"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/StayFinderHome.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              StayFinder – Hotel Booking & Merchant Management Platform
+            </h2>
+            <p class="text-sm text-gray-600">
+              StayFinder is an all-in-one platform that simplifies hotel booking
+              for customers while offering powerful tools for merchants to
+              manage their listings, bookings, and customers. Whether you're
+              looking for a stay or managing one, StayFinder connects guests and
+              property owners with a seamless, user-friendly experience.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >CSS</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >JavaScript</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >PHP</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >MySQL</span
+              >
+            </div>
+            <div class="flex flex-row gap-3">
+              <a
+                href="http://stayfinder.ct.ws/?i=1"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="https://github.com/prakashhi/Stayfinderapp"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
+            </div>
+          </div>
         </div>
 
-    </div>
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/MusicAPP.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              Music APP – Play Your Music, Beautifully
+            </h2>
+            <p class="text-sm text-gray-600">
+              Music APP is a sleek and modern music app designed for effortless listening. Enjoy your favorite songs with a stunning, responsive UI that enhances your music experience. From smooth animations to intuitive controls, TuneFlow blends functionality with design for the perfect audio journey.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >CSS</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >JavaScript</span
+              >
+            </div>
+            <div class="flex flex-row gap-3">
+              <a
+                href="https://prakashhi.github.io/spomusic/"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="https://github.com/prakashhi/spomusic"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/X_Clone.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              X_clone
+            </h2>
+            <p class="text-sm text-gray-600">
+              Strengthened expertise in UI design principles and responsive web design, ensuring seamless user experiences across all devices and screen sizes.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Tailwind CSS</span
+              >
 
-   <script src="Scripts/script.js"></script>
-</body>
+            </div>
+            <div class="flex flex-row gap-3">
+              <a
+                href="https://prakashhi.github.io/x_clonep/"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="https://github.com/prakashhi/x_clone"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <div class="rounded-lg shadow-md bg-white">
+          <div class="w-full bg-[#EAEAEA] rounded-t-lg">
+            <img
+              class="h-[200px] w-full object-cover rounded-t-lg"
+              src="./images/websites/AshapuraPapad.png"
+              alt="Project"
+            />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <h2 class="font-semibold text-lg">
+              Ashpura website
+            </h2>
+            <p class="text-sm text-gray-600">
+              Designed and developed a responsive e-commerce website to showcase Papad products, focusing on user-friendly layout, intuitive navigation, and engaging product presentation. Gained hands-on experience with modern e-commerce design principles and best practices in user experience (UX).
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >HTML</span
+              >
+              <span
+                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
+                >Tailwind CSS</span
+              >
+
+            </div>
+            <div class="flex flex-row gap-3">
+              <a
+                href="https://prakashhi.github.io/Ashapura-home-made-papad/"
+                target="_blank"
+                class="flex items-center gap-1 text-blue-600 hover:underline pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/arrow-right-up-long-fill.svg"
+                  alt=""
+                />
+                <span>Live Demo</span>
+              </a>
+              <a
+                href="https://github.com/prakashhi/Ashapura-home-made-papad"
+                target="_blank"
+                class="flex items-center gap-1 text-black pt-3"
+              >
+                <img
+                  class="w-[15px]"
+                  src="./images/SVG/github-line.svg"
+                  alt=""
+                />
+                <span>Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat card structure for more projects -->
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section name="Contact" id="Contact" class="py-10 px-4">
+      <div class="flex flex-col gap-3 items-center mt-10 pb-10">
+        <h1 class="text-2xl font-bold">Get In Touch</h1>
+        <div class="w-full md:w-1/2 text-center">
+          <p class="text-gray-500">
+            Interested in working together or have a question? Fill out the form
+            and I’ll get back to you.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row gap-10 justify-center items-start px-4 py-6"
+      >
+        <!-- Contact Info -->
+        <div class="md:w-1/2 w-full flex flex-col gap-4">
+          <h2 class="text-lg font-semibold">Contact Information</h2>
+
+          <div class="flex items-start gap-3">
+            <div class="bg-[#EAEAEA] p-2 rounded-md flex items-center">
+              <img
+                class="w-[16px]"
+                src="./images/SVG/mail-line.svg"
+                alt="Email"
+              />
+            </div>
+            <div>
+              <p class="text-sm font-medium">Email</p>
+              <p class="text-gray-700 text-sm">prakash398prajapati@gmail.com</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-md font-semibold">Follow Me</h3>
+            <div class="flex gap-4 mt-2">
+              <a
+                href="https://github.com/prakashhi"
+                target="_blank"
+                class="bg-[#EAEAEA] p-2 rounded-md"
+              >
+                <img
+                  class="w-[16px]"
+                  src="./images/SVG/github-line.svg"
+                  alt="GitHub"
+                />
+              </a>
+              <a
+                href="https://linkedin.com/in/prakash-prajapati-013a0a253"
+                target="_blank"
+                class="bg-[#EAEAEA] p-2 rounded-md"
+              >
+                <img
+                  class="w-[16px]"
+                  src="./images/SVG/linkedin-fill.svg"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form
+          class="md:w-1/2 w-full flex flex-col gap-5"
+          method="POST"
+          action="https://formsubmit.co/prakash398prajapati@gmail.com"
+        >
+          <input type="text" name="_honey" style="display: none" />
+
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New message from portfolio!"
+          />
+
+          <div class="flex flex-col gap-1">
+            <label for="name" class="text-gray-700 text-sm">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="border border-gray-300 rounded-lg p-2"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label for="email" class="text-gray-700 text-sm">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="border border-gray-300 rounded-lg p-2"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label for="message" class="text-gray-700 text-sm">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              class="border border-gray-300 rounded-lg p-2"
+              rows="4"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-black text-white rounded-lg py-2 px-3 hover:bg-gray-900 transition-all duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="./Scripts/script.js"></script>
+  </body>
 </html>
