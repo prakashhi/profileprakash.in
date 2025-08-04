@@ -78,3 +78,55 @@ function Closebtn() {
     Close.remove("max-[600px]:block");
   }
 }
+
+const skillData = [
+  {
+    name: "JavaScript",
+    img: "./images/SVG_LANGUAGE/js_5968292.png",
+    width: "15",
+  },
+  { name: "React", img: "./images/SVG_LANGUAGE/React.png", width: "15" },
+  {
+    name: "Tailwind CSS",
+    img: "./images/SVG_LANGUAGE/tailwind.svg",
+    width: "15",
+  },
+  { name: "MUI", img: "./images/SVG_LANGUAGE/material.svg", width: "15" },
+  { name: "Git", img: "./images/SVG_LANGUAGE/social.png", width: "15" },
+  { name: "GitHub", img: "./images/SVG_LANGUAGE/github.png", width: "15" },
+  { name: "Node.js", img: "./images/SVG_LANGUAGE/node-js.svg", width: "20" },
+  { name: "PHP", img: "./images/SVG_LANGUAGE/php.png", width: "15" },
+  { name: "MySQL", img: "./images/SVG_LANGUAGE/mysql.svg", width: "15" },
+  { name: "MongoDB", img: "./images/SVG_LANGUAGE/mongodb.svg", width: "15" },
+];
+
+const skill = document.getElementById("SkillLan");
+
+skillData.forEach((iteam, index) => {
+  const card = document.createElement("div");
+  card.classList.add(
+    "px-4",
+    "py-1",
+    "bg-gray-100",
+    "text-gray-700",
+    "text-sm",
+    "rounded-full",
+    "flex",
+    "flex-row",
+    "items-center",
+    "gap-2"
+  );
+
+  card.innerHTML = `<img
+  key="${index}"
+    class="rounded-sm"
+    src="${iteam.img}"
+    width="${iteam.width}"
+    alt=""
+    />
+    <span>${iteam.name}</span>`;
+
+  skill.appendChild(card);
+});
+
+ 
